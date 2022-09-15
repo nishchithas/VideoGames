@@ -1,0 +1,9 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.fontFamily": "Cascadia, Consolas, 'Courier New', monospace",
+  "angular.enable-strict-mode-prompt": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.foldingMaximumRegions": 15000,
+  "json.maxItemsComputed": 15000
+}
