@@ -11,6 +11,8 @@ import { SideNavigationComponent } from './layout/side-navigation/side-navigatio
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { GamesFilterComponent } from './pages/home/video-games/games-filter/games-filter.component';
+import { GamesItemComponent } from './pages/home/video-games/games-item/games-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     VideoGamesComponent,
     SideNavigationComponent,
     LayoutComponent,
+    GamesFilterComponent,
+    GamesItemComponent,
   ],
   imports: [
     BrowserModule,

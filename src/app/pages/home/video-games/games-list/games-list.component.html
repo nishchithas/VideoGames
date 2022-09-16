@@ -1,1 +1,14 @@
-<p>games-list works!</p>
+<div class="games-container">
+  <div class="games-list flex-grow-1">
+    <ng-container>
+      <div class="games-list">
+        <app-games-item [game]="games[0]"></app-games-item>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="message">
+      <div class="games-list loader">
+        <h1>{{ message }}</h1>
+      </div>
+    </ng-container>
+  </div>
+</div>
