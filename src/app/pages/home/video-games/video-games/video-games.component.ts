@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Game } from 'src/app/core/models/game';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { Observable, tap } from 'rxjs';
+import { Game } from 'src/app/core/models/interface/game';
 import { VideoGameDataService } from 'src/app/core/services/video-game-data.service';
 
 @Component({
@@ -11,9 +12,16 @@ import { VideoGameDataService } from 'src/app/core/services/video-game-data.serv
 export class VideoGamesComponent implements OnInit {
   games$!: Observable<Game[]>;
 
-  constructor(private videoGameDataService: VideoGameDataService) {}
+  constructor(
+    private videoGameDataService: VideoGameDataService,
+    private spinner: NgxSpinnerService
+  ) {}
 
   ngOnInit(): void {
-    this.games$ = this.videoGameDataService.getGames();
+    this.spinner.show();
+
+    this.games$ = this.videoGameDataService
+      .getGames()
+      .pipe(tap(() => this.spinner.hide()));
   }
 }

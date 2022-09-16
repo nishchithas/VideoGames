@@ -1,4 +1,11 @@
 <div class="games-container">
+  <app-games-filter
+    (searchByString)="searchByString($event)"
+    (minRating)="searchByMinRating($event)"
+    (releasedDate)="searchByKey($event)"
+    (clearFilters)="clearFilters()"
+  >
+  </app-games-filter>
   <div class="games-list flex-grow-1">
     <ng-container>
       <div class="games-list">

@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { GamesFilterComponent } from './pages/home/video-games/games-filter/games-filter.component';
 import { GamesItemComponent } from './pages/home/video-games/games-item/games-item.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { GamesItemComponent } from './pages/home/video-games/games-item/games-it
     CommonModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgxSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,3 +1,16 @@
-<ng-container *ngIf="games$ | async as games">
+<ng-container *ngIf="games$ | async as games; else loading">
   <app-games-list [games]="games"></app-games-list>
 </ng-container>
+<ng-template #loading>
+  <div class="spinner-container">
+    <ngx-spinner
+      bdColor="#081221"
+      size="medium"
+      [fullScreen]="false"
+      color="#fff"
+      type="ball-scale-multiple"
+    >
+      <p class="loading">Loading...</p>
+    </ngx-spinner>
+  </div>
+</ng-template>
