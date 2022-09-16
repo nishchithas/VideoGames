@@ -14,7 +14,7 @@
         </ng-container>
       </div>
     </ng-container>
-    <ng-container *ngIf="message">
+    <ng-container *ngIf="!games?.length">
       <div class="games-list loader">
         <h1>{{ message }}</h1>
       </div>

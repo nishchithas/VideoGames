@@ -10,7 +10,7 @@ import { VideoGameDataService } from 'src/app/core/services/video-game-data.serv
   styleUrls: ['./video-games.component.scss'],
 })
 export class VideoGamesComponent implements OnInit {
-  games$!: Observable<Game[]>;
+  games$: Observable<Game[]>;
 
   constructor(
     private videoGameDataService: VideoGameDataService,
