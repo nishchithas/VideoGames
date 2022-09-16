@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Game } from 'src/app/core/models/game';
 
 @Component({
@@ -7,21 +7,12 @@ import { Game } from 'src/app/core/models/game';
   styleUrls: ['./games-list.component.scss'],
 })
 export class GamesListComponent implements OnInit {
-  public games: Game[] = [];
-  public initialState: Game[] = [];
-  public filtredGames: Game[] = [];
-  public message: string = '';
+  @Input() games?: Game[];
+
+  initialState: Game[] = [];
+  filtredGames: Game[] = [];
+  message: string = '';
   constructor() {}
 
-  ngOnInit(): void {
-    this.games = [
-      {
-        id: 1,
-        name: 'Game Title',
-        first_release_date: 3,
-        summary: 'string',
-        rating: 10,
-      },
-    ];
-  }
+  ngOnInit(): void {}
 }

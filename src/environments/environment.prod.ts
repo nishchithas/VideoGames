@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  BASE_URI: 'https://public.connectnow.org.uk/applicant-test/',
 };

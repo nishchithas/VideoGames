@@ -2,7 +2,9 @@
   <div class="games-list flex-grow-1">
     <ng-container>
       <div class="games-list">
-        <app-games-item [game]="games[0]"></app-games-item>
+        <ng-container *ngFor="let game of games">
+          <app-games-item [game]="game"></app-games-item>
+        </ng-container>
       </div>
     </ng-container>
     <ng-container *ngIf="message">

@@ -1,2 +1,3 @@
-<app-games-list></app-games-list> <app-games-list></app-games-list>
-<app-games-list></app-games-list>
+<ng-container *ngIf="games$ | async as games">
+  <app-games-list [games]="games"></app-games-list>
+</ng-container>
