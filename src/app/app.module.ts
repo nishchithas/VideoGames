@@ -9,6 +9,8 @@ import { VideoGamesComponent } from './pages/home/video-games/video-games/video-
 import { LayoutComponent } from './layout/layout.component';
 import { SideNavigationComponent } from './layout/side-navigation/side-navigation.component';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,13 @@ import { CommonModule } from '@angular/common';
     SideNavigationComponent,
     LayoutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, CommonModule, BrowserModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CommonModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
