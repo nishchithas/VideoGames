@@ -74,8 +74,8 @@ h6 {
   color: $secondary-color;
   padding: 0.3rem 1rem;
 }
-// @media only screen and (max-width: $sm) {
-//   body {
-//     padding: 0.5rem;
-//   }
-// }
+@media only screen and (max-width: $breakpoint-sm) {
+  body {
+    padding: 0.5rem;
+  }
+}
