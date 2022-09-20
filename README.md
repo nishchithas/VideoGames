@@ -18,3 +18,5 @@ $ npm run test
 ```
 
 - After following above steps, navigate to `http://localhost:4200` on your browser to check the running website.
+
+### The app is hosted here: https://deploying-video-game.herokuapp.com/
